@@ -44,7 +44,11 @@ section {
     font-size: 40px;
 }
 
-
+img {
+    height: 300px;
+    width: 600px;
+    justify-content: center;
+}
 p {
     font-size: 18px;
 }
@@ -53,8 +57,7 @@ p {
 #portfolio,
 #contact {
     background: #f4f4f4;
-    
-    margin: 75px;
+    margin: 90px;
 }
 
 .portfolio-items {
@@ -62,8 +65,6 @@ p {
     /* justify-content: center; */
     padding: 50px;
 }
-
-
 
 footer {
     background: #333;
