@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -15,28 +13,32 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="assets/Erika_Williamson_Resume.pdf" download>Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
             <h1>Hi, I'm Erika Williamson</h1>
+            <div class="rotating-text" id="rotatingText"></div>
         </section>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi, I’m Erika, a Junior Software Developer with a passion for problem-solving and bringing ideas to life
-                through technology. My career journey began in health sciences, but my curiosity and love for innovation
-                led me to pivot into tech. I joined a software development bootcamp where I sharpened my skills in
-                programming languages like JavaScript and Java and discovered my knack for creating scalable and
-                efficient solutions.</p>
-            <p>I’ve had the chance to work on projects that push me to grow as a developer, building both front-end and
-                back-end systems. I genuinely enjoy taking concepts and turning them into functional, user-friendly
-                applications that make an impact.</p>
-            <p>When I’m not coding, I’m likely exploring new technologies, diving into personal projects (such as this page!), or
-                learning something new to stay ahead in the fast-moving tech world. Outside of work, you can find me
-                hiking with my family or cooking, which keeps me balanced and inspired.</p>
-            <p>I’d love to connect—whether it’s to collaborate, chat about the latest in tech, or share ideas. Let’s
-                build something great together!</p>
+            <div class="about-me">
+                <p>Hi, I’m Erika, a Junior Software Developer with a passion for problem-solving and bringing ideas to life
+                    through technology. My career journey began in health sciences, but my curiosity and love for innovation
+                    led me to pivot into tech. I joined a software development bootcamp where I sharpened my skills in
+                    programming languages like JavaScript and Java and discovered my knack for creating scalable and
+                    efficient solutions.</p>
+                <p>I’ve had the chance to work on projects that push me to grow as a developer, building both front-end and
+                    back-end systems. I genuinely enjoy taking concepts and turning them into functional, user-friendly
+                    applications that make an impact.</p>
+                <p>When I’m not coding, I’m likely exploring new technologies, diving into personal projects (such as this page!), or
+                    learning something new to stay ahead in the fast-moving tech world. Outside of work, you can find me
+                    hiking with my family or cooking, which keeps me balanced and inspired.</p>
+                <p>I’d love to connect—whether it’s to collaborate, chat about the latest in tech, or share ideas. Let’s
+                    build something great together!</p>
+            </div>
         </section>
         <section id="portfolio">
             <h2>My Work</h2>
@@ -51,16 +53,7 @@
                     <a href="https://github.com/eg842385/tap-navigator">View Project</a>
                 </div>
                 <div class="portfolio-item">
-                    <img src="path/to/project-screenshot.jpg" alt="Coming Soon...">
-                    <h3>TEnmo Application</h3>
-                    <p>Collaborated on the TEnmo platform, using Java for command-line development and RESTful API
-                        integration to enhance account security. Implemented token-based authentication and real-time
-                        transaction validation, allowing users to view balances and transaction history. The project
-                        leveraged programming expertise and effective API integration skills. Key tools used include
-                        Java, PostgreSQL, RESTful API, Tokenization, IntelliJ, Git, SQL.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="path/to/project-screenshot.jpg" alt="Coming Soon...">
+                    <img src="" alt="">
                     <h3>Trivia Trail</h3>
                     <p>Developed an engaging Java-based trivia game with dynamic question randomization, scoring
                         mechanics, and an intuitive CLI. Enabled users to choose from four categories and add new
@@ -68,12 +61,49 @@
                         skills for maintainability and scalability. Tools utilized are Java, JUnit, IntelliJ, OOP, Git.</p>
                     <a href="https://github.com/eg842385/TriviaTrail">View Project</a>
                 </div>
+                <div class="portfolio-item">
+                    <img src="" alt="">
+                    <h3>TEnmo Application</h3>
+                    <p>Collaborated on the TEnmo platform, using Java for command-line development and RESTful API
+                        integration to enhance account security. Implemented token-based authentication and real-time
+                        transaction validation, allowing users to view balances and transaction history. The project
+                        leveraged programming expertise and effective API integration skills. Key tools used include
+                        Java, PostgreSQL, RESTful API, Tokenization, IntelliJ, Git, SQL.</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Erika Williamson</p>
     </footer>
-</body>
 
+    <script>
+        const rotatingText = document.getElementById('rotatingText');
+        const texts = [
+            "Software Developer", 
+            "Leader", 
+            "Problem Solver", 
+            "Innovator", 
+            "Life-long Learner",
+            "Creative Thinker",
+            "Team Player",
+            "Tech Enthusiast",
+            "Full-Stack Developer",
+            "Visionary",
+            "Collaborator",
+            "Coder",
+            "Designer",
+            "Engineer"
+        ];
+        let index = 0;
+
+        function rotateText() {
+            rotatingText.textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+
+        setInterval(rotateText, 5000);
+        rotateText(); // Initial call to set the first text
+    </script>
+</body>
 </html>
