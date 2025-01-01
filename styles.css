@@ -9,7 +9,11 @@ body {
 header {
     background-color: #333;
     color: white;
-    top: 0;
+    padding: 0.5rem; /* Reduced padding */
+    position: fixed; /* Ensure it stays at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 header ul {
@@ -24,7 +28,7 @@ header ul li {
     width: auto;
 }
 
-header ul li a {
+header ul li a{
     color: white;
     text-decoration: none;
 }
@@ -44,7 +48,7 @@ nav ul li {
     margin: 0 ;
 }
 
-nav ul li a {
+nav ul li a{
     color: white;
     text-decoration: none;
 }
