@@ -21,8 +21,7 @@
     </header>
     <main>
         <section id="home">
-            <h1>Hi, I'm Erika Williamson</h1>
-            <div class="rotating-text" id="rotatingText"></div>
+            <h1>Hello World, I'm <span class="rotating-text" id="rotatingText"></span></h1>
         </section>
         <div id="about-space" style="height: 80px;"></div>
         <section id="about">
@@ -49,20 +48,13 @@
                 <div class="portfolio-item">
                     <img src="assets/HomePage.png" alt="Project Screenshot">
                     <h3>Hop To It: The Tap Navigator</h3>
-                    <p>BreweryFinder is a Vue.js app for discovering, viewing, and managing breweries and beers. It
-                        features a responsive interface, CRUD operations, state management with Vuex, API integration
-                        via Axios, and secure authentication. Key technologies include Vue.js, Vuex, Axios, JavaScript,
-                        HTML, CSS, RESTful APIs, and Git.</p>
+                    <p>BreweryFinder is a Vue.js app for discovering, viewing, and managing breweries and beers. It features a responsive interface, CRUD operations, state management with Vuex, API integration via Axios, and secure authentication. Key technologies include Vue.js, Vuex, Axios, JavaScript, HTML, CSS, RESTful APIs, and Git.</p>
                     <a href="https://github.com/eg842385/tap-navigator">View Project</a>
                 </div>
                 <div class="portfolio-item">
                     <img src="" alt="">
                     <h3>Trivia Trail</h3>
-                    <p>Developed an engaging Java-based trivia game with dynamic question randomization, scoring
-                        mechanics, and an intuitive CLI. Enabled users to choose from four categories and add new
-                        questions, enriching the learning experience. Utilized OOP principles and advanced backend
-                        skills for maintainability and scalability. Tools utilized are Java, JUnit, IntelliJ, OOP, Git.
-                    </p>
+                    <p>Developed an engaging Java-based trivia game with dynamic question randomization, scoring mechanics, and an intuitive CLI. Enabled users to choose from four categories and add new questions, enriching the learning experience. Utilized OOP principles and advanced backend skills for maintainability and scalability. Tools utilized are Java, JUnit, IntelliJ, OOP, Git.</p>
                     <a href="https://github.com/eg842385/TriviaTrail">View Project</a>
                 </div>
                 <div class="portfolio-item">
@@ -78,36 +70,32 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Erika Williamson</p>
+        <p>&copy; 2024 Erika Williamson. All rights reserved.</p>
     </footer>
-
     <script>
-        const rotatingText = document.getElementById('rotatingText');
-        const texts = [
-            "Software Developer",
-            "Leader",
-            "Problem Solver",
-            "Innovator",
-            "Life-long Learner",
-            "Creative Thinker",
-            "Team Player",
-            "Tech Enthusiast",
-            "Full-Stack Developer",
-            "Visionary",
-            "Collaborator",
-            "Coder",
-            "Designer",
-            "Engineer"
-        ];
-        let index = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+            const rotatingText = document.getElementById('rotatingText');
+            const phrases = ["a Junior Software Developer", "a Tech Enthusiast",
+                "Erika Williamson",
+                "a Data Enthusiast",
+                "a Leader",
+                "a Problem Solver",
+                "an Innovator",
+                "a Life-long Learner",
+                "a Creative Thinker",
+                "a Team Player",
+                "a Collaborator",
+            ];
+            let index = 0;
 
-        function rotateText() {
-            rotatingText.textContent = texts[index];
-            index = (index + 1) % texts.length;
-        }
+            function rotateText() {
+                rotatingText.textContent = phrases[index];
+                index = (index + 1) % phrases.length;
+            }
 
-        setInterval(rotateText, 5000);
-        rotateText(); // Initial call to set the first text
+            setInterval(rotateText, 4000); 
+            rotateText();
+        });
     </script>
 </body>
 
