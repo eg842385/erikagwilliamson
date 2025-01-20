@@ -23,7 +23,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(82, 81, 81, 0.7);
+    background: rgba(228, 222, 222, 0.6);
     position: fixed;
 }
 
@@ -44,12 +44,13 @@ header ul li {
 
 header ul li a,
 nav ul li a {
-    color: white;
+    color: rgb(250, 249, 250);
     text-decoration: none;
 }
 
 header ul li a:hover {
     text-decoration: underline;
+    color: #f8057e;
 }
 
 nav ul {
@@ -161,7 +162,7 @@ h3 {
 }
 
 footer {
-    background: rgba(82, 81, 81, 0.7);
+    background: rgba(228, 222, 222, 0.6);
     color: white;
     text-align: center;
     width: 100%;
